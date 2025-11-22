@@ -27,6 +27,16 @@ public class CashbackHackServiceTest {
     }
 
     @Test
+    public void testPositiveThousand(){
+
+        int amount = 2000;
+        CashbackHackService service = new CashbackHackService();
+        int expected = 0;
+        int actual =  service.remain(amount);
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
     public void testNegative(){
 
         int amount = -2345;
